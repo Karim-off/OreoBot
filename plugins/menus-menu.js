@@ -21,7 +21,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏
+    const str = `𝙊𝙍𝙀𝙊 - 𝘽𝙊𝙏
 
  ▢ *Hola,* ${taguser}
 
@@ -495,7 +495,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
       conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: fkontak2});
     }
   } catch {
-    conn.reply(m.chat, '*[ ℹ️ ] Este menu tiene un error interno, por lo cual no fue posible enviarlo.*', m);
+    conn.reply(m.chat, '*[ 🛑 ] 𝙴𝚜𝚝𝚎 𝚖𝚎𝚗𝚞 𝚝𝚒𝚎𝚗𝚎 𝚞𝚗 𝚎𝚛𝚛𝚘𝚛 𝚒𝚗𝚝𝚎𝚛𝚗𝚘, 𝚙𝚘𝚛 𝚕𝚘 𝚌𝚞𝚊𝚕 𝚗𝚘 𝚏𝚞𝚎 𝚙𝚘𝚜𝚒𝚋𝚕𝚎 𝚎𝚗𝚟𝚒𝚊𝚛𝚕𝚘🛑.*', m);
   }
 };
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
